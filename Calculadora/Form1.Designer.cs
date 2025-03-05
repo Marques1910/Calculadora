@@ -39,6 +39,8 @@
             this.btSub = new System.Windows.Forms.Button();
             this.numOper1 = new System.Windows.Forms.NumericUpDown();
             this.numOper2 = new System.Windows.Forms.NumericUpDown();
+            this.btLimpar = new System.Windows.Forms.Button();
+            this.btSegue = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numOper1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOper2)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +59,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(230, 194);
+            this.label2.Location = new System.Drawing.Point(230, 275);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(180, 36);
             this.label2.TabIndex = 1;
@@ -67,7 +69,7 @@
             // 
             this.lblOper.AutoSize = true;
             this.lblOper.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOper.Location = new System.Drawing.Point(588, 140);
+            this.lblOper.Location = new System.Drawing.Point(529, 174);
             this.lblOper.Name = "lblOper";
             this.lblOper.Size = new System.Drawing.Size(39, 36);
             this.lblOper.TabIndex = 2;
@@ -76,17 +78,16 @@
             // lblResultado
             // 
             this.lblResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultado.Location = new System.Drawing.Point(56, 334);
+            this.lblResultado.Location = new System.Drawing.Point(56, 388);
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.Size = new System.Drawing.Size(732, 42);
             this.lblResultado.TabIndex = 3;
-            this.lblResultado.Text = "label4";
             this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btDiv
             // 
             this.btDiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btDiv.Location = new System.Drawing.Point(507, 126);
+            this.btDiv.Location = new System.Drawing.Point(319, 192);
             this.btDiv.Name = "btDiv";
             this.btDiv.Size = new System.Drawing.Size(60, 50);
             this.btDiv.TabIndex = 5;
@@ -97,7 +98,7 @@
             // btSom
             // 
             this.btSom.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSom.Location = new System.Drawing.Point(275, 126);
+            this.btSom.Location = new System.Drawing.Point(236, 125);
             this.btSom.Name = "btSom";
             this.btSom.Size = new System.Drawing.Size(60, 50);
             this.btSom.TabIndex = 6;
@@ -108,9 +109,9 @@
             // btMult
             // 
             this.btMult.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btMult.Location = new System.Drawing.Point(427, 126);
+            this.btMult.Location = new System.Drawing.Point(319, 125);
             this.btMult.Name = "btMult";
-            this.btMult.Size = new System.Drawing.Size(60, 50);
+            this.btMult.Size = new System.Drawing.Size(60, 49);
             this.btMult.TabIndex = 7;
             this.btMult.Text = "x";
             this.btMult.UseVisualStyleBackColor = true;
@@ -120,7 +121,7 @@
             // 
             this.btIgual.Enabled = false;
             this.btIgual.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btIgual.Location = new System.Drawing.Point(362, 266);
+            this.btIgual.Location = new System.Drawing.Point(351, 329);
             this.btIgual.Name = "btIgual";
             this.btIgual.Size = new System.Drawing.Size(125, 45);
             this.btIgual.TabIndex = 8;
@@ -131,7 +132,7 @@
             // btSub
             // 
             this.btSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSub.Location = new System.Drawing.Point(350, 126);
+            this.btSub.Location = new System.Drawing.Point(236, 192);
             this.btSub.Name = "btSub";
             this.btSub.Size = new System.Drawing.Size(60, 50);
             this.btSub.TabIndex = 9;
@@ -160,7 +161,7 @@
             // numOper2
             // 
             this.numOper2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numOper2.Location = new System.Drawing.Point(493, 192);
+            this.numOper2.Location = new System.Drawing.Point(493, 270);
             this.numOper2.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -175,11 +176,34 @@
             this.numOper2.Size = new System.Drawing.Size(120, 41);
             this.numOper2.TabIndex = 11;
             // 
+            // btLimpar
+            // 
+            this.btLimpar.Location = new System.Drawing.Point(401, 125);
+            this.btLimpar.Name = "btLimpar";
+            this.btLimpar.Size = new System.Drawing.Size(75, 49);
+            this.btLimpar.TabIndex = 12;
+            this.btLimpar.Text = "Limpar";
+            this.btLimpar.UseVisualStyleBackColor = true;
+            this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
+            // 
+            // btSegue
+            // 
+            this.btSegue.Enabled = false;
+            this.btSegue.Location = new System.Drawing.Point(401, 192);
+            this.btSegue.Name = "btSegue";
+            this.btSegue.Size = new System.Drawing.Size(75, 50);
+            this.btSegue.TabIndex = 13;
+            this.btSegue.Text = "Segue";
+            this.btSegue.UseVisualStyleBackColor = true;
+            this.btSegue.Click += new System.EventHandler(this.btSegue_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btSegue);
+            this.Controls.Add(this.btLimpar);
             this.Controls.Add(this.numOper2);
             this.Controls.Add(this.numOper1);
             this.Controls.Add(this.btSub);
@@ -213,6 +237,8 @@
         private System.Windows.Forms.Button btSub;
         private System.Windows.Forms.NumericUpDown numOper1;
         private System.Windows.Forms.NumericUpDown numOper2;
+        private System.Windows.Forms.Button btLimpar;
+        private System.Windows.Forms.Button btSegue;
     }
 }
 
